@@ -1,3 +1,5 @@
+![GitHub License](https://img.shields.io/github/license/chialin/export-beancount-expenses)
+
 # Example of Simulating API Requests Locally with MSW
 
 ## Purpose
