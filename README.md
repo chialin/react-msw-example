@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+# Example of Simulating API Requests Locally with MSW
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Purpose
 
-Currently, two official plugins are available:
+1. How to set up MSW (Mock Service Worker).
+2. Resolve issues where MSW cannot intercept API requests properly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## MSW Version
 
-## Expanding the ESLint configuration
+MSW 2.0  
+https://mswjs.io/docs/getting-started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Error Message
 
-- Configure the top-level `parserOptions` property like this:
+`Uncaught (in promise) SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Reference Links
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- https://mswjs.io/docs/integrations/browser#conditionally-enable-mocking
+- https://github.com/mswjs/msw/issues/1753
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+# 使用 MSW 在本地端模擬 API request 範例
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 目的
+
+1. 如何設定 MSW （Mock Service Worker）
+2. 解決 MSW 無法正確攔截 API request
+
+# MSW 版本
+
+MSW 2.0
+https://mswjs.io/docs/getting-started
+
+## 錯誤訊息
+
+`Uncaught (in promise) SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON`
+
+# 參考連結
+
+- https://mswjs.io/docs/integrations/browser#conditionally-enable-mocking
+- https://github.com/mswjs/msw/issues/1753
